@@ -1,0 +1,88 @@
+<html>
+<header>
+<SCRIPT>
+	var p1 = new Image();
+	var p2 = new Image();
+	var p3 = new Image();
+	var p4 = new Image();
+	var p5 = new Image();
+
+	p1.src="pic_1.jpg";
+	p2.src="pic_2.jpg";
+	p3.src="pic_3.jpg";
+	p4.src="pic_4.jpg";
+	p5.src="pic_5.jpg";
+
+	var imgArray = new Array( p1, p2, p3, p4, p5 );
+
+	var counter = 0;
+	var end = imgArray.length - 1;
+	document.onkeydown = checkKey;
+	function checkKey(e) {
+		e = e || window.event;
+	if (e.keyCode == '37') {
+		scroll_backward();
+       // left arrow
+	}
+    else if (e.keyCode == '39') {
+       // right arrow
+scroll_forward();
+    }
+    	}
+function scroll_backward() {
+
+	if ( counter == 0 ) {
+		alert("start the pictures");
+		}
+	else{
+		counter--;
+		}
+	document.pic1.src = imgArray[counter].src;
+	}
+
+
+	function scroll_forward() {
+		if (counter == end)
+		{
+		alert("No more pictures");
+		}
+		else
+		{
+		counter++;
+		}
+	document.pic1.src = imgArray[counter].src;
+	}
+</SCRIPT>
+</header>
+
+<body>
+<p>
+bonjour le monde, counter is
+</p>
+len is 
+<p id="nb">
+</p>
+<button type="button"
+onclick="document.getElementById('demo').innerHTML = counter">
+Click me to display Date and Time.</button>
+<p id="demo"></p>
+
+<TABLE width = "500">
+<TR>
+	<TD height="200" width = "100">
+		<IMG SRC="forward.gif" onClick="scroll_forward()">
+	</TD>
+	<TD width = "300">
+		<IMG SRC="pic_1.jpg" name="pic1">
+	</TD>
+	<TD width = "100">
+		<IMG SRC="back.gif" onClick="scroll_backward()">
+	</TD>
+</TR>
+</TABLE>
+<SCRIPT>
+	document.getElementById("nb").innerHTML = end ;
+</SCRIPT>
+
+</body>
+</html>
