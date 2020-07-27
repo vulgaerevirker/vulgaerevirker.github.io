@@ -144,7 +144,7 @@ var imgArray = new Array( p1, p2, p3, p4, p5, p6, p7 );
 </div>
 
 <!-- Add a background color and large text to the whole page -->
-<div class="w3-sand w3-grayscale w3-large">
+<div class="w3-sand w3-large">
 
 <div class="w3-container, "id="vulvir">
 <div class="w3-content" style="max-width:700px">
@@ -155,10 +155,10 @@ var imgArray = new Array( p1, p2, p3, p4, p5, p6, p7 );
 <IMG name="p1" alt="sød hunni" style="width:100%;max-width:300px">
 <IMG name="p2" alt="sød hunni" style="width:100%;max-width:300px">
 <IMG name="p3" alt="sød hunni" style="width:100%;max-width:300px">
-	<IMG name="p4" alt="sød hunni" style="width:100%;max-width:300px">
-		<IMG name="p5" alt="sød hunni" style="width:100%;max-width:300px">
-			<IMG name="p6" alt="sød hunni" style="width:100%;max-width:300px">
-				<IMG name="p7" alt="sød hunni" style="width:100%;max-width:300px">
+<IMG name="p4" alt="sød hunni" style="width:100%;max-width:300px">
+<IMG name="p5" alt="sød hunni" style="width:100%;max-width:300px">
+<IMG name="p6" alt="sød hunni" style="width:100%;max-width:300px">
+<IMG name="p7" alt="sød hunni" style="width:100%;max-width:300px">
 </div>
 
 
@@ -245,9 +245,9 @@ reStyleimg(img6);
 
 function reStyleimg(inp)
 {
- inp.style.width = '300px';
- inp.style.height = '300px';
- inp.style.opacity = 0.7;
+	inp.style.width = '300px';
+	inp.style.height = '300px';
+	inp.style.opacity = 0.7;
 }
 
 var modalImg = document.getElementById("img01");
@@ -286,32 +286,32 @@ function checkKey(e) {
 }
 
 function scroll_backward() {
-		counter--;
-    if (counter < 0)
-    {
-      counter = end;
-    }
+	counter--;
+	if (counter < 0)
+	{
+		counter = end;
+	}
 	modalImg.src = imgArray[counter].src;
 }
 
 function scroll_forward() {
 	{
 		counter++;
-    if (counter > end)
-    {
-      counter = 0;
-    }
+		if (counter > end)
+		{
+			counter = 0;
+		}
 	}
 	modalImg.src = imgArray[counter].src;
 }
 
-	img.onclick = function(){openModal(0);}
-	img1.onclick = function(){openModal(1);}
-	img2.onclick = function(){openModal(2);}
-	img3.onclick = function(){openModal(3);}
-	img4.onclick = function(){openModal(4);}
-	img5.onclick = function(){openModal(5);}
-	img6.onclick = function(){openModal(6);}
+img.onclick = function(){openModal(0);}
+img1.onclick = function(){openModal(1);}
+img2.onclick = function(){openModal(2);}
+img3.onclick = function(){openModal(3);}
+img4.onclick = function(){openModal(4);}
+img5.onclick = function(){openModal(5);}
+img6.onclick = function(){openModal(6);}
 
 function openModal(nb)
 {
