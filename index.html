@@ -138,10 +138,39 @@ var imgArray = new Array( p1, p2, p3, p4, p5, p6, p7 );
 <a href="#about" class="w3-button w3-buttonhover w3-button-hover w3-block w3-black">om mig</a>
 </div>
 <div class="w3-col s3">
-	<a href="#about" class="w3-button w3-block w3-black" w3-button:hover{none}> <img name="cart" src="cart.png" style="max-width:20px"></a>
-	</div>
+	<!-- <a class="w3-button w3-block w3-black" w3-button:hover{none}> <img name="cart" src="cart.png" style="max-width:20px"></a>* -->
+	<button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black w3-block w3-buttonhoverbuy"><img name="cart" src="cart.png" style="max-width:20px"></button>	
 </div>
 </div>
+</div>
+
+<div id="id01" class="w3-modal">
+    <div class="w3-modal-content w3-card-4">
+      <header class="w3-container w3-teal"> 
+        <span onclick="document.getElementById('id01').style.display='none'" 
+        class="w3-button w3-display-topright">&times;</span>
+        <h2>lige ved og næsten...</h2>
+      </header>
+      <div class="w3-container">
+		<input type="checkbox" id="addr" value="adresse" onclick="addrfct()">
+		<label for="addr"> Jeg ønsker at få den tilsendt (+PostNord porto 50kr) </label><br>
+
+		<p id="giveaddr" style="display:none"><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Din adresse">
+			<input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Postnr + by">
+		</p>
+
+
+		<p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Din e-mail adresse"></p>
+		<p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Kortnr"></p>
+<p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Navn på kort"></p>
+<p><button class="w3-button w3-black" type="submit">BETAL</button></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 
 <!-- Add a background color and large text to the whole page -->
 <div class="w3-sand w3-large">
@@ -316,18 +345,35 @@ function openModal(nb)
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on <span> (x), close the modal
+var modalpay = document.getElementById('id01');
 
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
+  }
+  if (event.target == modalpay) {
+    modalpay.style.display = "none";
   }
 }
 
 span.onclick = function() { 
 	modal.style.display = "none";
 }
+
+function addrfct() {
+  // Get the checkbox
+  var checkBox = document.getElementById("addr");
+  // Get the output text
+  var text = document.getElementById("giveaddr");
+
+  // If the checkbox is checked, display the output text
+  if (checkBox.checked == true){
+    text.style.display = "block";
+  } else {
+    text.style.display = "none";
+  }
+}
+
 </script>
 </body>
 </html>
