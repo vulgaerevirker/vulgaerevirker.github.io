@@ -1,0 +1,9 @@
+[
+    {"name": "pic1", "price": "299.95", "available": "1"},
+    {"name": "pic2","price": "99.95", "available": "1"},
+    {"name": "pic3","price": "199.95", "available": "1"},
+    {"name": "pic4","price": "399.95", "available": "1"},
+    {"name": "pic5","price": "499.95", "available": "1"},
+    {"name": "pic6","price": "599.95", "available": "1"},
+    {"name": "pic7", "price": "799.95", "available": "1"}
+]

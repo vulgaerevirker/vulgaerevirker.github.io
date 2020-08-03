@@ -16,6 +16,17 @@ height: 100%;
 display: none;
 }
 
+.row {
+  display: flex; /* equal height of the children */
+}
+
+.col {
+  flex: 1; /* additionally, equal width */
+  
+  padding: 1em;
+  border: solid;
+}
+
 #myImg {
 	border-radius: 5px;
 cursor: pointer;
@@ -164,11 +175,10 @@ var imgArray = new Array( p1, p2, p3, p4, p5, p6, p7 );
 			<input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Postnr + by">
 		</p>
 
-
 		<p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Din e-mail adresse"></p>
 		<p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Kortnr"></p>
-<p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Navn på kort"></p>
-<p><button class="w3-button w3-black" type="submit">BETAL</button></p>
+		<p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Navn på kort"></p>
+		<p><button class="w3-button w3-black" type="submit">BETAL</button></p>
       </div>
     </div>
   </div>
@@ -186,13 +196,58 @@ var imgArray = new Array( p1, p2, p3, p4, p5, p6, p7 );
 <p>in lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 </div>
 <div class="w3-content">
-<IMG name="p1" alt="sød hunni" style="width:100%;max-width:300px">
-<IMG name="p2" alt="sød hunni" style="width:100%;max-width:300px">
-<IMG name="p3" alt="sød hunni" style="width:100%;max-width:300px">
-<IMG name="p4" alt="sød hunni" style="width:100%;max-width:300px">
-<IMG name="p5" alt="sød hunni" style="width:100%;max-width:300px">
-<IMG name="p6" alt="sød hunni" style="width:100%;max-width:300px">
-<IMG name="p7" alt="sød hunni" style="width:100%;max-width:300px">
+	<div class="card">
+<div class="row">
+	<div class="col">
+		<img name="p1" alt="Denim Jeans" style="width:100%;max-width:300px">
+		<h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">mindfullness & pik</span></h5>
+		<p class="price">dkk199.95</p>
+		<p>mindfullness & pik</p>
+		<p><button>Add to Cart</button></p></div>
+	<div class="col">
+		<img name="p2" alt="Denim Jeans" style="width:100%;max-width:300px">
+		<h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">come over here</span></h5>
+		<p class="price">dkk99.95</p>
+		<p>come over here</p>
+		<p><button>Add to Cart</button></p></div>
+	<div class="col">
+		<img name="p3" alt="Denim Jeans" style="width:100%;max-width:300px">
+		<h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">giv mig mel i munden</span></h5>
+		<p class="price">dkk399.95</p>
+		<p>giv mig mel i munden</p>
+		<p><button>Add to Cart</button></p></div>
+</div>
+
+<div class="row">
+	<div class="col">
+		<img name="p4" alt="Denim Jeans" style="width:100%;max-width:300px">
+		<h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">Tailored Jeans</span></h5>
+		<p class="price">dkk499.95</p>
+		<p>Some text about the jeans..</p>
+		<p><button>Add to Cart</button></p></div>
+	<div class="col">
+		<img name="p5" alt="Denim Jeans" style="width:100%;max-width:300px">
+		<h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">Tailored Jeans</span></h5>
+		<p class="price">dkk69.95</p>
+		<p>Some text about the jeans..</p>
+		<p><button>Add to Cart</button></p></div>
+	<div class="col">
+		<img name="p6" alt="Denim Jeans" style="width:100%;max-width:300px">
+		<h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">Tailored Jeans</span></h5>
+		<p class="price">dkk9999.95</p>
+		<p>Some text about the jeans..</p>
+		<p><button>Add to Cart</button></p></div>
+</div>
+
+<div class="row">
+	<div class="col">
+		<img name="p7" alt="Denim Jeans" style="width:100%;max-width:300px">
+		<h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">Tailored Jeans</span></h5>
+		<p class="price">dkk499.95</p>
+		<p>Some text about the jeans..</p>
+		<p><button>Add to Cart</button></p></div>
+</div>
+
 </div>
 
 
