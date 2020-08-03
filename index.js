@@ -148,7 +148,12 @@ request.responseType = 'json';
 request.send();
 
 request.onload = function() {
-	var superHeroes = request.response;
-	populateHeader(superHeroes);
-	showHeroes(superHeroes);
+	var superHeroesText = request.response;
+	var superHeroes = JSON.parse(superHeroesText);
+	var heroes = jsonObj['members'];
+	var para = document.createElement("p");
+	var node = document.textContent = 'dkk' + heroes[0].price;
+	para.appendChild(node);
+	var element = document.getElementById("price1");
+	element.appendChild(para);
   }
