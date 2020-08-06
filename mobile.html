@@ -5,5 +5,25 @@
 
 <body>
     Hello mobile version
+
+
+	<div>
+  <!-- Replace path to products by the url of your products from the administration -->
+  <button data-apicart-add-item="https://cdn.apicart.dev/external/jhnf0g16kav0v7w1ns75llupbjkscxya/data/VV/VV01.json">Buy</button>
+  <button data-apicart-remove-item="https://cdn.apicart.dev/external/jhnf0g16kav0v7w1ns75llupbjkscxya/data/VV/VV01.json">Remove</button>
+  <div id="app">
+    <!-- #apicart-cart-dropdown will be replaced with the cart dropdown -->
+    <div id="apicart-cart-dropdown"></div>
+    <!-- #apicart will be replaced with the rest of the application -->
+    <div id="apicart"></div>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@apicart/vue-components@1.0.0-alpha7/dist/bundles/default/default.full.min.js"></script>
+<script>
+  Apicart.setDevEnv().configure({
+    // Replace Apicart Sandbox token with your token from the administration
+    store: new Apicart.Store({ token: '!X8upgeZhp?rYyMNg96sMgCc2vgGaRtJoHicleSrXLLSJfiiExxX9UpcfVIiPQFu' }),
+  }).initVueBundle();
+</script>
 </body>
 </html>
